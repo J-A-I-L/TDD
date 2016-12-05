@@ -26,3 +26,7 @@ Ok, if you do so, you'll get an error saying "No module named 'foo'". That's bec
 Now an **`SQLite`** database has been created. It has the name `foo.sqlite3`, or generically `<module>.sqlite3`. It's a database with a single table. There you can add the name of the method to test, and its input and expected output. Don't worry if you haven't already written it in `<module>.py`: you can set a `0` in the `perform_test` column, or even if it is set to 1 and the method doesn't exist, a `PyUnit` pragma is used specifiying the method is not implemented yet.
 
 So, now you can rename `test_foo.py` to your `test_<module>.py` and run it once to create the database. Then you can start adding tests into the database, and writing your methods. Run `test_<module>.py` whenever you want to pass the tests.
+
+
+#### Footnote
+I did this development using Eclipse's plugin for Python and PyUnit. I'm currently trying to make this piece of code independent from Eclipse. Meanwile, it'll show error when running from plain console.

@@ -9,7 +9,7 @@ I made this tdd app during a [Coursera bioinformatics course](https://en.courser
 
 So, as I already had all the datasets before starting programming, I could see as a **`Test Driven Development`**. I decided to fully automate the process, so I made a database with a table. Each entry has 3 fields: method name, input data and output data. I made an app that opens the database, and for each entry reads the name of the method, creates a call to that method using reflection, passes the data input as a parameter and gets its response. Then, compares the actual response with the expected output in the database.
 
-![sample io in sqlite database.png](https://cloud.githubusercontent.com/assets/17472377/20877789/50db77e8-bacb-11e6-9aaf-99094676c7a8.png)
+![sample io in sqlite database.png](https://cloud.githubusercontent.com/assets/17472377/20883201/2ace5cea-bae5-11e6-9c1b-b47deb6a51fb.png)
 
 Well, actually it's a bit more complicated: the method is not actually called by my app. Instead, it creates a test suite using **`PyUnit`** (Python's equivalent to JUnit), and creates one test case for every method in the database. But you get the idea.
 
@@ -17,7 +17,7 @@ Well, actually it's a bit more complicated: the method is not actually called by
 
 So... Have you already tried to run it!?
 
-![no module named foo.png](https://cloud.githubusercontent.com/assets/17472377/20877793/574d2eaa-bacb-11e6-8a8c-6b678629d421.png)
+![no module named foo.png](https://cloud.githubusercontent.com/assets/17472377/20883209/37bad6b8-bae5-11e6-9a56-4508edfaf3e1.png)
 
 Ok, if you do so, you'll get an error saying "No module named 'foo'". That's because the app run in a module called `test_foo.py` expects to find the methods to test in `foo.py`. More generically, `test_<module>.py` looks for methods in `<module>.py`.
 
